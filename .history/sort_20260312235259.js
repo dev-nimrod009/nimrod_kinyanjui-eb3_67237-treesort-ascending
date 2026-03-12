@@ -46,7 +46,7 @@ class TreeSort {
         }
 
         const result = [];
-
+        // In-order traversal (recursive is usually fine for traversal unless tree is very deep)
         const traverse = (node) => {
             if (node) {
                 traverse(node.left);
@@ -59,15 +59,15 @@ class TreeSort {
     }
 }
 
-
+// --- EXPERIMENT RUNNER ---
 const sizes = [1, 2, 3, 4, 5, 10, 250, 999, 9999, 89786, 789300, 1780000];
 const ts = new TreeSort();
 
 console.log("Size | Comparisons | Assignments | Time (ms)");
-console.log("-------------   -----------------   ----------------");
+console.log("----------------------------------------------");
 
 sizes.forEach(size => {
-
+    // Generate random integers for the test
     const data = Array.from({ length: size }, () => Math.floor(Math.random() * 1000000));
 
     const start = performance.now();
