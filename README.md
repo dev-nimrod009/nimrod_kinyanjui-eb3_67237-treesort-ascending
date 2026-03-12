@@ -1,6 +1,17 @@
 # nimrod_kinyanjui-eb3_67237-treesort-ascending
 repo on a  tree sorting algorithm  
 This is a project on tree sorting algorithm
+
+It implements the  algorithm in JavaScript. 
+It includes an iterative insertion method to handle large datasets without triggering recursion stack errors.
+
+ Complexity Analysis
+
+How it works
+1. Insertion: Elements are inserted iteratively 
+2. Comparison: Each element is compared against existing nodes to determine its position.
+3. Traversal:An in-order traversal (Left-Root-Right) outputs the sorted list.
+   
 The results
 
 PS C:\Users\nimro\Documents\GitHub\projectOne\tree sort> node sort.js
