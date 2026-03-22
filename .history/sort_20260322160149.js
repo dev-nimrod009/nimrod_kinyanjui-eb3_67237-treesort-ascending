@@ -1,5 +1,4 @@
 const fs = require('fs');
-
 class TreeNode {
     constructor(val) {
         this.val = val;
@@ -61,35 +60,9 @@ class TreeSort {
     }
 }
 
-function getDataFromFile(filename) {
-    try {
-        if (!fs.existsSync(filename)) return null;
-
-        const rawContent = fs.readFileSync(filename, 'utf8');
-
-        const matches = rawContent.match(/\d+/g);
-        return matches ? matches.map(Number) : [];
-    } catch (err) {
-        console.error("Error reading file:", err.message);
-        return null;
-    }
-}
-
-const ts = new TreeSort();
-
-const externalData = getDataFromFile('data.txt');
-
-if (externalData) {
-    console.log(`--- Running Sort on External File (data.txt) ---`);
-    console.log(`Extracted ${externalData.length} numbers.`);
-    const start = performance.now();
-    ts.sort(externalData);
-    const end = performance.now();
-    console.log(`Done in ${(end - start).toFixed(2)}ms\n`);
-}
 
 const sizes = [1, 2, 3, 4, 5, 10, 250, 999, 9999, 89786, 789300, 1780000];
-
+const ts = new TreeSort();
 
 console.log("Size | Comparisons | Assignments | Time (ms)");
 console.log("-------------   -----------------   ----------------");

@@ -89,7 +89,7 @@ if (externalData) {
 }
 
 const sizes = [1, 2, 3, 4, 5, 10, 250, 999, 9999, 89786, 789300, 1780000];
-
+const ts = new TreeSort();
 
 console.log("Size | Comparisons | Assignments | Time (ms)");
 console.log("-------------   -----------------   ----------------");

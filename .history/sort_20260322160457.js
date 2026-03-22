@@ -77,19 +77,9 @@ function getDataFromFile(filename) {
 
 const ts = new TreeSort();
 
-const externalData = getDataFromFile('data.txt');
-
-if (externalData) {
-    console.log(`--- Running Sort on External File (data.txt) ---`);
-    console.log(`Extracted ${externalData.length} numbers.`);
-    const start = performance.now();
-    ts.sort(externalData);
-    const end = performance.now();
-    console.log(`Done in ${(end - start).toFixed(2)}ms\n`);
-}
 
 const sizes = [1, 2, 3, 4, 5, 10, 250, 999, 9999, 89786, 789300, 1780000];
-
+const ts = new TreeSort();
 
 console.log("Size | Comparisons | Assignments | Time (ms)");
 console.log("-------------   -----------------   ----------------");
